@@ -1,0 +1,13 @@
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:26:13:LCD_1IN54_Reset	8	static
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:41:13:LCD_1IN54_SendCommand	16	static
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:54:13:LCD_1IN54_SendData_8Bit	16	static
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:67:13:LCD_1IN54_SendData_16Bit	16	static
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:80:13:LCD_1IN54_InitReg	8	static
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:159:13:LCD_1IN54_SetAttributes	24	static
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:185:6:LCD_1IN54_Init	16	static
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:205:6:LCD_1IN54_SetWindows	24	static
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:228:6:LCD_1IN54_Clear	24	static
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:246:6:LCD_1IN54_Display	24	static
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:259:6:LCD_1IN54_DisplayWindows	32	static
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:283:6:LCD_1IN54_DrawPaint	16	static
+../Drivers/GC9A01A_Driver/Src/LCD_1in54.c:295:6:LCD_1IN54_SetBackLight	16	static
