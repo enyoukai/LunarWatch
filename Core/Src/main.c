@@ -27,6 +27,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include <math.h>
 
 #include "DEV_Config.h"
 #include "GUI_Paint.h"
@@ -47,6 +48,11 @@ void LCDBootScreen();
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
+#define degToRad(angleInDegrees) ((angleInDegrees) * M_PI / 180.0)
+
+#define SECONDS_RADIUS 90
+#define MINUTES_RADIUS 70
+#define HOURS_RADIUS 50
 
 /* USER CODE END PM */
 
@@ -119,20 +125,12 @@ int main(void)
 
   Paint_Clear(WHITE);
 
-	Paint_DrawCircle(120,120, 120, BLACK ,DOT_PIXEL_2X2,DRAW_FILL_EMPTY); // outside circle
-	Paint_DrawLine  (120, 0, 120, 12,BLACK ,DOT_PIXEL_4X4,LINE_STYLE_SOLID); // four inner lines
-	Paint_DrawLine  (120, 228, 120, 240,BLACK ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
-	Paint_DrawLine  (0, 120, 12, 120,BLACK ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
-	Paint_DrawLine  (228, 120, 240, 120,BLACK ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
 
 //	Paint_DrawImage(gImage_70X70, 85, 25, 70, 70);
 //	Paint_DrawString_CN(56,140, "΢ѩ����",   &Font24CN,BLACK,  WHITE);
 
-	Paint_DrawLine  (120, 120, 70, 70,BLACK ,DOT_PIXEL_3X3,LINE_STYLE_SOLID); // hour
-	Paint_DrawLine  (120, 120, 176, 64,BLACK ,DOT_PIXEL_3X3,LINE_STYLE_SOLID); // minute
-	Paint_DrawLine  (120, 120, 120, 210,RED ,DOT_PIXEL_2X2,LINE_STYLE_SOLID); // seconds
 
-	printf("quit...\r\n");
+
 	//DEV_Module_Exit();
   /* USER CODE END 2 */
 
@@ -144,7 +142,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-		Paint_DrawString_EN(56, 120, messageBuffer,&Font24,  WHITE, WHITE);
+	  Paint_Clear(WHITE);
 
 	RTC_DateTypeDef getDate = {0};
 	RTC_TimeTypeDef getTime = {0};
@@ -159,7 +157,20 @@ int main(void)
 	printf("%02d:%02d:%02d\n", getTime.Hours, getTime.Minutes, getTime.Seconds);
 	printf("%02d/%02d/%02d\n", getDate.Date, getDate.Month, getDate.Year);
 
-	sprintf(messageBuffer, "%02d:%02d:%02d", getTime.Hours, getTime.Minutes, getTime.Seconds);
+	sprintf(messageBuffer, "%d:%02d", getTime.Hours, getTime.Minutes);
+
+	float secondsDeg = (360 * (float)getTime.Seconds) / 60;
+	float secondsRad = degToRad(secondsDeg);
+
+	float minutesDeg = (360 * (float)getTime.Minutes) / 60;
+	float minutesRad = degToRad(minutesDeg);
+
+	float hoursDeg = (360 * (float)getTime.Hours) / 24; // military time
+	float hoursRad = degToRad(hoursDeg);
+
+	Paint_DrawLine  (120, 120, 120 + HOURS_RADIUS * sin(hoursRad), 120 - HOURS_RADIUS * cos(hoursRad),BLACK ,DOT_PIXEL_3X3,LINE_STYLE_SOLID); // hour
+	Paint_DrawLine  (120, 120, 120 + MINUTES_RADIUS * sin(minutesRad), 120 - MINUTES_RADIUS * cos(minutesRad),BLACK ,DOT_PIXEL_3X3,LINE_STYLE_SOLID); // minute
+	Paint_DrawLine  (120, 120, 120 + SECONDS_RADIUS * sin(secondsRad), 120 - SECONDS_RADIUS * cos(secondsRad),RED ,DOT_PIXEL_2X2,LINE_STYLE_SOLID); // seconds
 
 	Paint_DrawString_EN(56, 120, messageBuffer,&Font24,  WHITE, BLUE);
 
