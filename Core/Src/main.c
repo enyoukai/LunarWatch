@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "rtc.h"
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
@@ -25,7 +26,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "DEV_Config.h"
+#include "GUI_Paint.h"
+#include "LCD_1in28.h"
+#include "image.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,9 +95,44 @@ int main(void)
   MX_USART2_UART_Init();
   MX_TIM3_Init();
   MX_SPI1_Init();
+  MX_RTC_Init();
   /* USER CODE BEGIN 2 */
-  LCD_1in28_test();
+	printf("LCD_1IN28_test Demo\r\n");
+	DEV_Module_Init();
 
+	printf("LCD_1IN28_ Init and Clear...\r\n");
+	LCD_1IN28_SetBackLight(10000);
+	LCD_1IN28_Init(VERTICAL);
+	LCD_1IN28_Clear(BLACK);
+
+	printf("Paint_NewImage\r\n");
+	Paint_NewImage(LCD_1IN28_WIDTH,LCD_1IN28_HEIGHT, 0, BLACK);
+
+	printf("Set Clear and Display Funtion\r\n");
+	Paint_SetClearFuntion(LCD_1IN28_Clear);
+	Paint_SetDisplayFuntion(LCD_1IN28_DrawPaint);
+
+	printf("Paint_Clear\r\n");
+	Paint_Clear(BLACK);
+	DEV_Delay_ms(1000);
+
+	printf("drawing...\r\n");
+	Paint_DrawCircle(120,120, 120, BLUE ,DOT_PIXEL_2X2,DRAW_FILL_EMPTY);
+	Paint_DrawLine  (120, 0, 120, 12,GREEN ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
+	Paint_DrawLine  (120, 228, 120, 240,GREEN ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
+	Paint_DrawLine  (0, 120, 12, 120,GREEN ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
+	Paint_DrawLine  (228, 120, 240, 120,GREEN ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
+
+	Paint_DrawImage(gImage_70X70, 85, 25, 70, 70);
+	Paint_DrawString_CN(56,140, "΢ѩ����",   &Font24CN,BLACK,  WHITE);
+	Paint_DrawString_EN(123, 123, "WAVESHARE",&Font16,  BLACK, GREEN);
+
+	Paint_DrawLine  (120, 120, 70, 70,YELLOW ,DOT_PIXEL_3X3,LINE_STYLE_SOLID);
+	Paint_DrawLine  (120, 120, 176, 64,BLUE ,DOT_PIXEL_3X3,LINE_STYLE_SOLID);
+	Paint_DrawLine  (120, 120, 120, 210,RED ,DOT_PIXEL_2X2,LINE_STYLE_SOLID);
+
+	printf("quit...\r\n");
+	//DEV_Module_Exit();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -103,6 +142,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  uint8_t Test[] = "Hello World !!!\r\n"; //Data to send
+	  HAL_UART_Transmit(&huart2,Test,sizeof(Test),10);// Sending in normal mode
+	  HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
@@ -124,9 +166,11 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
+  RCC_OscInitStruct.LSEState = RCC_LSE_ON;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 16;

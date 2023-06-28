@@ -7,22 +7,7 @@
 C_SRCS += \
 ../Drivers/GC9A01A_Driver/Src/DEV_Config.c \
 ../Drivers/GC9A01A_Driver/Src/GUI_Paint.c \
-../Drivers/GC9A01A_Driver/Src/LCD_0in96.c \
-../Drivers/GC9A01A_Driver/Src/LCD_0inch96_test.c \
-../Drivers/GC9A01A_Driver/Src/LCD_1in14.c \
-../Drivers/GC9A01A_Driver/Src/LCD_1in3.c \
-../Drivers/GC9A01A_Driver/Src/LCD_1in54.c \
-../Drivers/GC9A01A_Driver/Src/LCD_1in8.c \
-../Drivers/GC9A01A_Driver/Src/LCD_1inch14_test.c \
 ../Drivers/GC9A01A_Driver/Src/LCD_1inch28.c \
-../Drivers/GC9A01A_Driver/Src/LCD_1inch28_test.c \
-../Drivers/GC9A01A_Driver/Src/LCD_1inch3_test.c \
-../Drivers/GC9A01A_Driver/Src/LCD_1inch54_test.c \
-../Drivers/GC9A01A_Driver/Src/LCD_1inch8_test.c \
-../Drivers/GC9A01A_Driver/Src/LCD_2inch.c \
-../Drivers/GC9A01A_Driver/Src/LCD_2inch4.c \
-../Drivers/GC9A01A_Driver/Src/LCD_2inch4_test.c \
-../Drivers/GC9A01A_Driver/Src/LCD_2inch_test.c \
 ../Drivers/GC9A01A_Driver/Src/font12.c \
 ../Drivers/GC9A01A_Driver/Src/font12CN.c \
 ../Drivers/GC9A01A_Driver/Src/font16.c \
@@ -35,22 +20,7 @@ C_SRCS += \
 OBJS += \
 ./Drivers/GC9A01A_Driver/Src/DEV_Config.o \
 ./Drivers/GC9A01A_Driver/Src/GUI_Paint.o \
-./Drivers/GC9A01A_Driver/Src/LCD_0in96.o \
-./Drivers/GC9A01A_Driver/Src/LCD_0inch96_test.o \
-./Drivers/GC9A01A_Driver/Src/LCD_1in14.o \
-./Drivers/GC9A01A_Driver/Src/LCD_1in3.o \
-./Drivers/GC9A01A_Driver/Src/LCD_1in54.o \
-./Drivers/GC9A01A_Driver/Src/LCD_1in8.o \
-./Drivers/GC9A01A_Driver/Src/LCD_1inch14_test.o \
 ./Drivers/GC9A01A_Driver/Src/LCD_1inch28.o \
-./Drivers/GC9A01A_Driver/Src/LCD_1inch28_test.o \
-./Drivers/GC9A01A_Driver/Src/LCD_1inch3_test.o \
-./Drivers/GC9A01A_Driver/Src/LCD_1inch54_test.o \
-./Drivers/GC9A01A_Driver/Src/LCD_1inch8_test.o \
-./Drivers/GC9A01A_Driver/Src/LCD_2inch.o \
-./Drivers/GC9A01A_Driver/Src/LCD_2inch4.o \
-./Drivers/GC9A01A_Driver/Src/LCD_2inch4_test.o \
-./Drivers/GC9A01A_Driver/Src/LCD_2inch_test.o \
 ./Drivers/GC9A01A_Driver/Src/font12.o \
 ./Drivers/GC9A01A_Driver/Src/font12CN.o \
 ./Drivers/GC9A01A_Driver/Src/font16.o \
@@ -63,22 +33,7 @@ OBJS += \
 C_DEPS += \
 ./Drivers/GC9A01A_Driver/Src/DEV_Config.d \
 ./Drivers/GC9A01A_Driver/Src/GUI_Paint.d \
-./Drivers/GC9A01A_Driver/Src/LCD_0in96.d \
-./Drivers/GC9A01A_Driver/Src/LCD_0inch96_test.d \
-./Drivers/GC9A01A_Driver/Src/LCD_1in14.d \
-./Drivers/GC9A01A_Driver/Src/LCD_1in3.d \
-./Drivers/GC9A01A_Driver/Src/LCD_1in54.d \
-./Drivers/GC9A01A_Driver/Src/LCD_1in8.d \
-./Drivers/GC9A01A_Driver/Src/LCD_1inch14_test.d \
 ./Drivers/GC9A01A_Driver/Src/LCD_1inch28.d \
-./Drivers/GC9A01A_Driver/Src/LCD_1inch28_test.d \
-./Drivers/GC9A01A_Driver/Src/LCD_1inch3_test.d \
-./Drivers/GC9A01A_Driver/Src/LCD_1inch54_test.d \
-./Drivers/GC9A01A_Driver/Src/LCD_1inch8_test.d \
-./Drivers/GC9A01A_Driver/Src/LCD_2inch.d \
-./Drivers/GC9A01A_Driver/Src/LCD_2inch4.d \
-./Drivers/GC9A01A_Driver/Src/LCD_2inch4_test.d \
-./Drivers/GC9A01A_Driver/Src/LCD_2inch_test.d \
 ./Drivers/GC9A01A_Driver/Src/font12.d \
 ./Drivers/GC9A01A_Driver/Src/font12CN.d \
 ./Drivers/GC9A01A_Driver/Src/font16.d \
@@ -96,7 +51,7 @@ Drivers/GC9A01A_Driver/Src/%.o Drivers/GC9A01A_Driver/Src/%.su Drivers/GC9A01A_D
 clean: clean-Drivers-2f-GC9A01A_Driver-2f-Src
 
 clean-Drivers-2f-GC9A01A_Driver-2f-Src:
-	-$(RM) ./Drivers/GC9A01A_Driver/Src/DEV_Config.cyclo ./Drivers/GC9A01A_Driver/Src/DEV_Config.d ./Drivers/GC9A01A_Driver/Src/DEV_Config.o ./Drivers/GC9A01A_Driver/Src/DEV_Config.su ./Drivers/GC9A01A_Driver/Src/GUI_Paint.cyclo ./Drivers/GC9A01A_Driver/Src/GUI_Paint.d ./Drivers/GC9A01A_Driver/Src/GUI_Paint.o ./Drivers/GC9A01A_Driver/Src/GUI_Paint.su ./Drivers/GC9A01A_Driver/Src/LCD_0in96.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_0in96.d ./Drivers/GC9A01A_Driver/Src/LCD_0in96.o ./Drivers/GC9A01A_Driver/Src/LCD_0in96.su ./Drivers/GC9A01A_Driver/Src/LCD_0inch96_test.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_0inch96_test.d ./Drivers/GC9A01A_Driver/Src/LCD_0inch96_test.o ./Drivers/GC9A01A_Driver/Src/LCD_0inch96_test.su ./Drivers/GC9A01A_Driver/Src/LCD_1in14.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_1in14.d ./Drivers/GC9A01A_Driver/Src/LCD_1in14.o ./Drivers/GC9A01A_Driver/Src/LCD_1in14.su ./Drivers/GC9A01A_Driver/Src/LCD_1in3.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_1in3.d ./Drivers/GC9A01A_Driver/Src/LCD_1in3.o ./Drivers/GC9A01A_Driver/Src/LCD_1in3.su ./Drivers/GC9A01A_Driver/Src/LCD_1in54.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_1in54.d ./Drivers/GC9A01A_Driver/Src/LCD_1in54.o ./Drivers/GC9A01A_Driver/Src/LCD_1in54.su ./Drivers/GC9A01A_Driver/Src/LCD_1in8.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_1in8.d ./Drivers/GC9A01A_Driver/Src/LCD_1in8.o ./Drivers/GC9A01A_Driver/Src/LCD_1in8.su ./Drivers/GC9A01A_Driver/Src/LCD_1inch14_test.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_1inch14_test.d ./Drivers/GC9A01A_Driver/Src/LCD_1inch14_test.o ./Drivers/GC9A01A_Driver/Src/LCD_1inch14_test.su ./Drivers/GC9A01A_Driver/Src/LCD_1inch28.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_1inch28.d ./Drivers/GC9A01A_Driver/Src/LCD_1inch28.o ./Drivers/GC9A01A_Driver/Src/LCD_1inch28.su ./Drivers/GC9A01A_Driver/Src/LCD_1inch28_test.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_1inch28_test.d ./Drivers/GC9A01A_Driver/Src/LCD_1inch28_test.o ./Drivers/GC9A01A_Driver/Src/LCD_1inch28_test.su ./Drivers/GC9A01A_Driver/Src/LCD_1inch3_test.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_1inch3_test.d ./Drivers/GC9A01A_Driver/Src/LCD_1inch3_test.o ./Drivers/GC9A01A_Driver/Src/LCD_1inch3_test.su ./Drivers/GC9A01A_Driver/Src/LCD_1inch54_test.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_1inch54_test.d ./Drivers/GC9A01A_Driver/Src/LCD_1inch54_test.o ./Drivers/GC9A01A_Driver/Src/LCD_1inch54_test.su ./Drivers/GC9A01A_Driver/Src/LCD_1inch8_test.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_1inch8_test.d ./Drivers/GC9A01A_Driver/Src/LCD_1inch8_test.o ./Drivers/GC9A01A_Driver/Src/LCD_1inch8_test.su ./Drivers/GC9A01A_Driver/Src/LCD_2inch.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_2inch.d ./Drivers/GC9A01A_Driver/Src/LCD_2inch.o ./Drivers/GC9A01A_Driver/Src/LCD_2inch.su ./Drivers/GC9A01A_Driver/Src/LCD_2inch4.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_2inch4.d ./Drivers/GC9A01A_Driver/Src/LCD_2inch4.o ./Drivers/GC9A01A_Driver/Src/LCD_2inch4.su ./Drivers/GC9A01A_Driver/Src/LCD_2inch4_test.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_2inch4_test.d ./Drivers/GC9A01A_Driver/Src/LCD_2inch4_test.o ./Drivers/GC9A01A_Driver/Src/LCD_2inch4_test.su ./Drivers/GC9A01A_Driver/Src/LCD_2inch_test.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_2inch_test.d ./Drivers/GC9A01A_Driver/Src/LCD_2inch_test.o ./Drivers/GC9A01A_Driver/Src/LCD_2inch_test.su ./Drivers/GC9A01A_Driver/Src/font12.cyclo ./Drivers/GC9A01A_Driver/Src/font12.d ./Drivers/GC9A01A_Driver/Src/font12.o ./Drivers/GC9A01A_Driver/Src/font12.su ./Drivers/GC9A01A_Driver/Src/font12CN.cyclo ./Drivers/GC9A01A_Driver/Src/font12CN.d ./Drivers/GC9A01A_Driver/Src/font12CN.o ./Drivers/GC9A01A_Driver/Src/font12CN.su ./Drivers/GC9A01A_Driver/Src/font16.cyclo ./Drivers/GC9A01A_Driver/Src/font16.d ./Drivers/GC9A01A_Driver/Src/font16.o ./Drivers/GC9A01A_Driver/Src/font16.su ./Drivers/GC9A01A_Driver/Src/font20.cyclo ./Drivers/GC9A01A_Driver/Src/font20.d ./Drivers/GC9A01A_Driver/Src/font20.o ./Drivers/GC9A01A_Driver/Src/font20.su ./Drivers/GC9A01A_Driver/Src/font24.cyclo ./Drivers/GC9A01A_Driver/Src/font24.d ./Drivers/GC9A01A_Driver/Src/font24.o ./Drivers/GC9A01A_Driver/Src/font24.su ./Drivers/GC9A01A_Driver/Src/font24CN.cyclo ./Drivers/GC9A01A_Driver/Src/font24CN.d ./Drivers/GC9A01A_Driver/Src/font24CN.o ./Drivers/GC9A01A_Driver/Src/font24CN.su ./Drivers/GC9A01A_Driver/Src/font8.cyclo ./Drivers/GC9A01A_Driver/Src/font8.d ./Drivers/GC9A01A_Driver/Src/font8.o ./Drivers/GC9A01A_Driver/Src/font8.su ./Drivers/GC9A01A_Driver/Src/image.cyclo ./Drivers/GC9A01A_Driver/Src/image.d ./Drivers/GC9A01A_Driver/Src/image.o ./Drivers/GC9A01A_Driver/Src/image.su
+	-$(RM) ./Drivers/GC9A01A_Driver/Src/DEV_Config.cyclo ./Drivers/GC9A01A_Driver/Src/DEV_Config.d ./Drivers/GC9A01A_Driver/Src/DEV_Config.o ./Drivers/GC9A01A_Driver/Src/DEV_Config.su ./Drivers/GC9A01A_Driver/Src/GUI_Paint.cyclo ./Drivers/GC9A01A_Driver/Src/GUI_Paint.d ./Drivers/GC9A01A_Driver/Src/GUI_Paint.o ./Drivers/GC9A01A_Driver/Src/GUI_Paint.su ./Drivers/GC9A01A_Driver/Src/LCD_1inch28.cyclo ./Drivers/GC9A01A_Driver/Src/LCD_1inch28.d ./Drivers/GC9A01A_Driver/Src/LCD_1inch28.o ./Drivers/GC9A01A_Driver/Src/LCD_1inch28.su ./Drivers/GC9A01A_Driver/Src/font12.cyclo ./Drivers/GC9A01A_Driver/Src/font12.d ./Drivers/GC9A01A_Driver/Src/font12.o ./Drivers/GC9A01A_Driver/Src/font12.su ./Drivers/GC9A01A_Driver/Src/font12CN.cyclo ./Drivers/GC9A01A_Driver/Src/font12CN.d ./Drivers/GC9A01A_Driver/Src/font12CN.o ./Drivers/GC9A01A_Driver/Src/font12CN.su ./Drivers/GC9A01A_Driver/Src/font16.cyclo ./Drivers/GC9A01A_Driver/Src/font16.d ./Drivers/GC9A01A_Driver/Src/font16.o ./Drivers/GC9A01A_Driver/Src/font16.su ./Drivers/GC9A01A_Driver/Src/font20.cyclo ./Drivers/GC9A01A_Driver/Src/font20.d ./Drivers/GC9A01A_Driver/Src/font20.o ./Drivers/GC9A01A_Driver/Src/font20.su ./Drivers/GC9A01A_Driver/Src/font24.cyclo ./Drivers/GC9A01A_Driver/Src/font24.d ./Drivers/GC9A01A_Driver/Src/font24.o ./Drivers/GC9A01A_Driver/Src/font24.su ./Drivers/GC9A01A_Driver/Src/font24CN.cyclo ./Drivers/GC9A01A_Driver/Src/font24CN.d ./Drivers/GC9A01A_Driver/Src/font24CN.o ./Drivers/GC9A01A_Driver/Src/font24CN.su ./Drivers/GC9A01A_Driver/Src/font8.cyclo ./Drivers/GC9A01A_Driver/Src/font8.d ./Drivers/GC9A01A_Driver/Src/font8.o ./Drivers/GC9A01A_Driver/Src/font8.su ./Drivers/GC9A01A_Driver/Src/image.cyclo ./Drivers/GC9A01A_Driver/Src/image.d ./Drivers/GC9A01A_Driver/Src/image.o ./Drivers/GC9A01A_Driver/Src/image.su
 
 .PHONY: clean-Drivers-2f-GC9A01A_Driver-2f-Src
 

@@ -455,7 +455,7 @@ void LCD_1IN28_DrawPaint(UWORD x, UWORD y, UWORD Color)
 function:
 	Setting backlight
 parameter	:
-	  value : Range 0~1000   Duty cycle is value/1000	
+	  value : Range 0~10000   Duty cycle is value/10000
 *******************************************************************************/
 void LCD_1IN28_SetBackLight(UWORD Value)
 {
