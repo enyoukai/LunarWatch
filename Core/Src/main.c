@@ -26,6 +26,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
+
 #include "DEV_Config.h"
 #include "GUI_Paint.h"
 #include "LCD_1in28.h"
@@ -39,7 +41,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+void LCDInit();
+void LCDBootScreen();
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -56,6 +59,19 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+
+// routing printf to uart
+#ifdef __GNUC__
+#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#else
+#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#endif
+
+PUTCHAR_PROTOTYPE
+{
+  HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
+  return ch;
+}
 
 /* USER CODE END PFP */
 
@@ -97,39 +113,24 @@ int main(void)
   MX_SPI1_Init();
   MX_RTC_Init();
   /* USER CODE BEGIN 2 */
-	printf("LCD_1IN28_test Demo\r\n");
-	DEV_Module_Init();
 
-	printf("LCD_1IN28_ Init and Clear...\r\n");
-	LCD_1IN28_SetBackLight(10000);
-	LCD_1IN28_Init(VERTICAL);
-	LCD_1IN28_Clear(BLACK);
+  LCDInit();
+  LCDBootScreen();
 
-	printf("Paint_NewImage\r\n");
-	Paint_NewImage(LCD_1IN28_WIDTH,LCD_1IN28_HEIGHT, 0, BLACK);
+  Paint_Clear(WHITE);
 
-	printf("Set Clear and Display Funtion\r\n");
-	Paint_SetClearFuntion(LCD_1IN28_Clear);
-	Paint_SetDisplayFuntion(LCD_1IN28_DrawPaint);
+	Paint_DrawCircle(120,120, 120, BLACK ,DOT_PIXEL_2X2,DRAW_FILL_EMPTY); // outside circle
+	Paint_DrawLine  (120, 0, 120, 12,BLACK ,DOT_PIXEL_4X4,LINE_STYLE_SOLID); // four inner lines
+	Paint_DrawLine  (120, 228, 120, 240,BLACK ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
+	Paint_DrawLine  (0, 120, 12, 120,BLACK ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
+	Paint_DrawLine  (228, 120, 240, 120,BLACK ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
 
-	printf("Paint_Clear\r\n");
-	Paint_Clear(BLACK);
-	DEV_Delay_ms(1000);
+//	Paint_DrawImage(gImage_70X70, 85, 25, 70, 70);
+//	Paint_DrawString_CN(56,140, "΢ѩ����",   &Font24CN,BLACK,  WHITE);
 
-	printf("drawing...\r\n");
-	Paint_DrawCircle(120,120, 120, BLUE ,DOT_PIXEL_2X2,DRAW_FILL_EMPTY);
-	Paint_DrawLine  (120, 0, 120, 12,GREEN ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
-	Paint_DrawLine  (120, 228, 120, 240,GREEN ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
-	Paint_DrawLine  (0, 120, 12, 120,GREEN ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
-	Paint_DrawLine  (228, 120, 240, 120,GREEN ,DOT_PIXEL_4X4,LINE_STYLE_SOLID);
-
-	Paint_DrawImage(gImage_70X70, 85, 25, 70, 70);
-	Paint_DrawString_CN(56,140, "΢ѩ����",   &Font24CN,BLACK,  WHITE);
-	Paint_DrawString_EN(123, 123, "WAVESHARE",&Font16,  BLACK, GREEN);
-
-	Paint_DrawLine  (120, 120, 70, 70,YELLOW ,DOT_PIXEL_3X3,LINE_STYLE_SOLID);
-	Paint_DrawLine  (120, 120, 176, 64,BLUE ,DOT_PIXEL_3X3,LINE_STYLE_SOLID);
-	Paint_DrawLine  (120, 120, 120, 210,RED ,DOT_PIXEL_2X2,LINE_STYLE_SOLID);
+	Paint_DrawLine  (120, 120, 70, 70,BLACK ,DOT_PIXEL_3X3,LINE_STYLE_SOLID); // hour
+	Paint_DrawLine  (120, 120, 176, 64,BLACK ,DOT_PIXEL_3X3,LINE_STYLE_SOLID); // minute
+	Paint_DrawLine  (120, 120, 120, 210,RED ,DOT_PIXEL_2X2,LINE_STYLE_SOLID); // seconds
 
 	printf("quit...\r\n");
 	//DEV_Module_Exit();
@@ -142,9 +143,19 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  uint8_t Test[] = "Hello World !!!\r\n"; //Data to send
-	  HAL_UART_Transmit(&huart2,Test,sizeof(Test),10);// Sending in normal mode
-	  HAL_Delay(1000);
+	RTC_DateTypeDef getDate = {0};
+	RTC_TimeTypeDef getTime = {0};
+	if (HAL_RTC_GetTime(&hrtc, &getTime, RTC_FORMAT_BIN) != HAL_OK)
+	{
+	Error_Handler();
+	}
+	if (HAL_RTC_GetDate(&hrtc, &getDate, RTC_FORMAT_BIN) != HAL_OK)
+	{
+	Error_Handler();
+	}
+	printf("%02d:%02d:%02d\n", getTime.Hours, getTime.Minutes, getTime.Seconds);
+	printf("%02d/%02d/%02d\n", getDate.Date, getDate.Month, getDate.Year);
+	HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
@@ -199,6 +210,28 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+void LCDInit() {
+	DEV_Module_Init();
+
+	LCD_1IN28_SetBackLight(10000);
+	LCD_1IN28_Init(VERTICAL);
+
+	printf("Paint_NewImage\r\n");
+	Paint_NewImage(LCD_1IN28_WIDTH,LCD_1IN28_HEIGHT, 0, WHITE);
+
+	printf("Set Clear and Display Funtion\r\n");
+	Paint_SetClearFuntion(LCD_1IN28_Clear);
+	Paint_SetDisplayFuntion(LCD_1IN28_DrawPaint);
+}
+
+void LCDBootScreen() {
+	Paint_Clear(WHITE);
+	Paint_DrawString_EN(56, 120, "LunarWatch",&Font24,  WHITE, BLUE);
+
+	HAL_Delay(2000);
+
+}
 
 /* USER CODE END 4 */
 
