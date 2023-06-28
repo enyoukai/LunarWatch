@@ -53,7 +53,7 @@ void LCDBootScreen();
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+char messageBuffer[20];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -143,6 +143,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+		Paint_DrawString_EN(56, 120, messageBuffer,&Font24,  WHITE, WHITE);
+
 	RTC_DateTypeDef getDate = {0};
 	RTC_TimeTypeDef getTime = {0};
 	if (HAL_RTC_GetTime(&hrtc, &getTime, RTC_FORMAT_BIN) != HAL_OK)
@@ -155,6 +158,11 @@ int main(void)
 	}
 	printf("%02d:%02d:%02d\n", getTime.Hours, getTime.Minutes, getTime.Seconds);
 	printf("%02d/%02d/%02d\n", getDate.Date, getDate.Month, getDate.Year);
+
+	sprintf(messageBuffer, "%02d:%02d:%02d", getTime.Hours, getTime.Minutes, getTime.Seconds);
+
+	Paint_DrawString_EN(56, 120, messageBuffer,&Font24,  WHITE, BLUE);
+
 	HAL_Delay(1000);
   }
   /* USER CODE END 3 */
