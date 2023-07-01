@@ -1,0 +1,9 @@
+../Drivers/lvgl-master/examples/widgets/chart/../../../src/core/../misc/lv_color.h:343:20:lv_color16_set_int	16	static
+../Drivers/lvgl-master/examples/widgets/chart/../../../src/core/../misc/lv_color.h:358:20:lv_color_set_int	16	static
+../Drivers/lvgl-master/examples/widgets/chart/../../../src/core/../misc/lv_color.h:368:24:lv_color16_to_int	24	static
+../Drivers/lvgl-master/examples/widgets/chart/../../../src/core/../misc/lv_color.h:385:24:lv_color_to_int	16	static
+../Drivers/lvgl-master/examples/widgets/chart/../../../src/core/../misc/lv_color.h:586:48:lv_color_mix	40	static
+../Drivers/lvgl-master/examples/widgets/chart/../../../src/core/../core/lv_disp.h:390:34:lv_scr_act	8	static
+../Drivers/lvgl-master/examples/widgets/chart/lv_example_chart_7.c:4:13:draw_event_cb	64	static
+../Drivers/lvgl-master/examples/widgets/chart/lv_example_chart_7.c:29:13:add_data	32	static
+../Drivers/lvgl-master/examples/widgets/chart/lv_example_chart_7.c:39:6:lv_example_chart_7	48	static

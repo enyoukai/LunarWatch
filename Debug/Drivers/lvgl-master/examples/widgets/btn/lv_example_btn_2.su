@@ -1,0 +1,6 @@
+../Drivers/lvgl-master/examples/widgets/btn/../../../src/core/../misc/lv_color.h:718:26:lv_color_make	16	static
+../Drivers/lvgl-master/examples/widgets/btn/../../../src/core/../misc/lv_color.h:818:26:lv_color_white	8	static
+../Drivers/lvgl-master/examples/widgets/btn/../../../src/core/../misc/lv_style.h:571:20:lv_style_set_pad_all	16	static
+../Drivers/lvgl-master/examples/widgets/btn/../../../src/core/../core/lv_disp.h:390:34:lv_scr_act	8	static
+../Drivers/lvgl-master/examples/widgets/btn/../../../src/core/lv_obj_pos.h:199:20:lv_obj_center	16	static
+../Drivers/lvgl-master/examples/widgets/btn/lv_example_btn_2.c:7:6:lv_example_btn_2	24	static

@@ -1,0 +1,2 @@
+input.c:7:6:input_init	1
+input.c:14:6:input_read_cb	1

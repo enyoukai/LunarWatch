@@ -1,0 +1,15 @@
+../Drivers/lvgl-master/examples/widgets/menu/../../../src/core/../misc/lv_color.h:520:28:lv_color_to32	24	static
+../Drivers/lvgl-master/examples/widgets/menu/../../../src/core/../misc/lv_color.h:710:23:lv_color_brightness	24	static
+../Drivers/lvgl-master/examples/widgets/menu/../../../src/core/../core/lv_disp.h:390:34:lv_scr_act	8	static
+../Drivers/lvgl-master/examples/widgets/menu/../../../src/core/lv_obj_pos.h:199:20:lv_obj_center	16	static
+../Drivers/lvgl-master/examples/widgets/menu/../../../src/core/lv_obj_style_gen.h:118:26:lv_obj_get_style_pad_left	24	static
+../Drivers/lvgl-master/examples/widgets/menu/../../../src/core/lv_obj_style_gen.h:166:26:lv_obj_get_style_bg_color	24	static
+../Drivers/lvgl-master/examples/widgets/menu/../../../src/core/lv_obj_style.h:233:20:lv_obj_set_style_pad_hor	24	static
+../Drivers/lvgl-master/examples/widgets/menu/../../../src/widgets/slider/lv_slider.h:88:20:lv_slider_set_value	24	static
+../Drivers/lvgl-master/examples/widgets/menu/../../../src/widgets/slider/lv_slider.h:110:20:lv_slider_set_range	24	static
+../Drivers/lvgl-master/examples/widgets/menu/lv_example_menu_5.c:20:6:lv_example_menu_5	72	static
+../Drivers/lvgl-master/examples/widgets/menu/lv_example_menu_5.c:114:13:back_event_handler	40	static
+../Drivers/lvgl-master/examples/widgets/menu/lv_example_menu_5.c:125:13:switch_handler	32	static
+../Drivers/lvgl-master/examples/widgets/menu/lv_example_menu_5.c:145:19:create_text	40	static
+../Drivers/lvgl-master/examples/widgets/menu/lv_example_menu_5.c:173:19:create_slider	32	static
+../Drivers/lvgl-master/examples/widgets/menu/lv_example_menu_5.c:190:19:create_switch	32	static

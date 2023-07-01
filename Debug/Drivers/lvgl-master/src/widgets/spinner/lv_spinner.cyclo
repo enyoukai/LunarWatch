@@ -1,0 +1,11 @@
+lv_anim.h:125:20:lv_anim_set_var	1
+lv_anim.h:137:20:lv_anim_set_exec_cb	1
+lv_anim.h:147:20:lv_anim_set_time	1
+lv_anim.h:168:20:lv_anim_set_values	1
+lv_anim.h:195:20:lv_anim_set_path_cb	1
+lv_anim.h:266:20:lv_anim_set_repeat_count	1
+lv_spinner.c:52:12:lv_spinner_create	1
+lv_spinner.c:67:13:lv_spinner_constructor	1
+lv_spinner.c:94:13:arc_anim_start_angle	1
+lv_spinner.c:100:13:arc_anim_end_angle	1
+lv_spinner.c:105:16:anim_path	1

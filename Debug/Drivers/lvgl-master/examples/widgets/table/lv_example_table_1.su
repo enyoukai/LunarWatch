@@ -1,0 +1,9 @@
+../Drivers/lvgl-master/examples/widgets/table/../../../src/core/../misc/lv_color.h:343:20:lv_color16_set_int	16	static
+../Drivers/lvgl-master/examples/widgets/table/../../../src/core/../misc/lv_color.h:358:20:lv_color_set_int	16	static
+../Drivers/lvgl-master/examples/widgets/table/../../../src/core/../misc/lv_color.h:368:24:lv_color16_to_int	24	static
+../Drivers/lvgl-master/examples/widgets/table/../../../src/core/../misc/lv_color.h:385:24:lv_color_to_int	16	static
+../Drivers/lvgl-master/examples/widgets/table/../../../src/core/../misc/lv_color.h:586:48:lv_color_mix	40	static
+../Drivers/lvgl-master/examples/widgets/table/../../../src/core/../core/lv_disp.h:390:34:lv_scr_act	8	static
+../Drivers/lvgl-master/examples/widgets/table/../../../src/core/lv_obj_pos.h:199:20:lv_obj_center	16	static
+../Drivers/lvgl-master/examples/widgets/table/lv_example_table_1.c:4:13:draw_part_event_cb	40	static
+../Drivers/lvgl-master/examples/widgets/table/lv_example_table_1.c:33:6:lv_example_table_1	16	static

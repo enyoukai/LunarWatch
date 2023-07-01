@@ -1,0 +1,8 @@
+../Drivers/lvgl-master/src/misc/lv_math.c:55:31:lv_trigo_sin	24	static
+../Drivers/lvgl-master/src/misc/lv_math.c:112:16:do_cubic_bezier	32	static
+../Drivers/lvgl-master/src/misc/lv_math.c:137:9:lv_cubic_bezier	88	static
+../Drivers/lvgl-master/src/misc/lv_math.c:229:28:lv_sqrt	32	static
+../Drivers/lvgl-master/src/misc/lv_math.c:252:10:lv_atan2	40	static
+../Drivers/lvgl-master/src/misc/lv_math.c:334:9:lv_pow	48	static
+../Drivers/lvgl-master/src/misc/lv_math.c:356:9:lv_map	32	static
+../Drivers/lvgl-master/src/misc/lv_math.c:377:10:lv_rand	24	static

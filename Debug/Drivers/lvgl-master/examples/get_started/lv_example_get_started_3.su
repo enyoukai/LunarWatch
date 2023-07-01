@@ -1,0 +1,8 @@
+../Drivers/lvgl-master/examples/get_started/../../src/core/../misc/lv_color.h:718:26:lv_color_make	16	static
+../Drivers/lvgl-master/examples/get_started/../../src/core/../misc/lv_color.h:762:20:lv_color_filter_dsc_init	16	static
+../Drivers/lvgl-master/examples/get_started/../../src/core/../misc/lv_color.h:822:26:lv_color_black	8	static
+../Drivers/lvgl-master/examples/get_started/../../src/core/../core/lv_disp.h:390:34:lv_scr_act	8	static
+../Drivers/lvgl-master/examples/get_started/../../src/core/lv_obj_pos.h:199:20:lv_obj_center	16	static
+../Drivers/lvgl-master/examples/get_started/lv_example_get_started_3.c:8:19:darken	16	static
+../Drivers/lvgl-master/examples/get_started/lv_example_get_started_3.c:14:13:style_init	8	static
+../Drivers/lvgl-master/examples/get_started/lv_example_get_started_3.c:47:6:lv_example_get_started_3	24	static

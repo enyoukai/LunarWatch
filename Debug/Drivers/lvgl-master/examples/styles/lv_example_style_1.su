@@ -1,0 +1,4 @@
+../Drivers/lvgl-master/examples/styles/../../src/core/../misc/../font/../misc/lv_area.h:300:26:lv_pct	16	static
+../Drivers/lvgl-master/examples/styles/../../src/core/../misc/lv_style.h:585:20:lv_style_set_pad_ver	16	static
+../Drivers/lvgl-master/examples/styles/../../src/core/../core/lv_disp.h:390:34:lv_scr_act	8	static
+../Drivers/lvgl-master/examples/styles/lv_example_style_1.c:7:6:lv_example_style_1	16	static

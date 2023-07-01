@@ -1,0 +1,16 @@
+lv_area.h:135:26:lv_area_get_width	1
+lv_area.h:145:26:lv_area_get_height	1
+lv_color.h:343:20:lv_color16_set_int	1
+lv_color.h:358:20:lv_color_set_int	1
+lv_color.h:368:24:lv_color16_to_int	1
+lv_color.h:385:24:lv_color_to_int	1
+lv_color.h:423:20:lv_color_eq	1
+lv_color.h:586:48:lv_color_mix	1
+lv_draw_sw_transform.c:89:6:lv_draw_sw_transform	10
+lv_draw_sw_transform.c:183:13:rgb_no_aa	6
+lv_draw_sw_transform.c:226:13:rgb_no_aa_chroma_key	7
+lv_draw_sw_transform.c:272:13:argb_no_aa	6
+lv_draw_sw_transform.c:310:13:rgb565a8_no_aa	6
+lv_draw_sw_transform.c:341:13:argb_and_rgb_aa	34
+lv_draw_sw_transform.c:524:13:a8_aa	22
+lv_draw_sw_transform.c:601:13:transform_point_upscaled	5

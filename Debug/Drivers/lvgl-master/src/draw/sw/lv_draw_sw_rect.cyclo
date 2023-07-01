@@ -1,0 +1,17 @@
+lv_area.h:122:20:lv_area_copy	1
+lv_area.h:135:26:lv_area_get_width	1
+lv_area.h:145:26:lv_area_get_height	1
+lv_mem.h:96:20:lv_memzero	1
+lv_color.h:368:24:lv_color16_to_int	1
+lv_color.h:385:24:lv_color_to_int	1
+lv_color.h:423:20:lv_color_eq	1
+lv_draw_sw_rect.c:71:6:lv_draw_sw_rect	1
+lv_draw_sw_rect.c:91:13:draw_bg	36
+lv_draw_sw_rect.c:321:13:draw_bg_img	9
+lv_draw_sw_rect.c:395:13:draw_border	11
+lv_draw_sw_rect.c:424:35:draw_shadow	98
+lv_draw_sw_rect.c:944:35:shadow_draw_corner_buf	13
+lv_draw_sw_rect.c:1031:35:shadow_blur_corner	15
+lv_draw_sw_rect.c:1105:13:draw_outline	5
+lv_draw_sw_rect.c:1141:6:draw_border_generic	44
+lv_draw_sw_rect.c:1366:13:draw_border_simple	7

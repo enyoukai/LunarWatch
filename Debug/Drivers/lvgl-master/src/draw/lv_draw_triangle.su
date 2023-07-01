@@ -1,0 +1,2 @@
+../Drivers/lvgl-master/src/draw/lv_draw_triangle.c:38:6:lv_draw_polygon	32	static
+../Drivers/lvgl-master/src/draw/lv_draw_triangle.c:46:6:lv_draw_triangle	32	static

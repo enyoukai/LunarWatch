@@ -1,0 +1,6 @@
+../Drivers/lvgl-master/examples/widgets/canvas/../../../src/core/../misc/lv_color.h:343:20:lv_color16_set_int	16	static
+../Drivers/lvgl-master/examples/widgets/canvas/../../../src/core/../misc/lv_color.h:358:20:lv_color_set_int	16	static
+../Drivers/lvgl-master/examples/widgets/canvas/../../../src/core/../misc/lv_color.h:520:28:lv_color_to32	24	static
+../Drivers/lvgl-master/examples/widgets/canvas/../../../src/core/../misc/lv_color.h:723:26:lv_color_hex	24	static
+../Drivers/lvgl-master/examples/widgets/canvas/../../../src/core/../core/lv_disp.h:390:34:lv_scr_act	8	static
+../Drivers/lvgl-master/examples/widgets/canvas/lv_example_canvas_2.c:10:6:lv_example_canvas_2	48	static

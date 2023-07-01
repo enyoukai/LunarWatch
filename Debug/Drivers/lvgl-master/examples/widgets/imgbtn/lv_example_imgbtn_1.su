@@ -1,0 +1,5 @@
+../Drivers/lvgl-master/examples/widgets/imgbtn/../../../src/core/../misc/lv_color.h:718:26:lv_color_make	16	static
+../Drivers/lvgl-master/examples/widgets/imgbtn/../../../src/core/../misc/lv_color.h:818:26:lv_color_white	8	static
+../Drivers/lvgl-master/examples/widgets/imgbtn/../../../src/core/../misc/lv_color.h:822:26:lv_color_black	8	static
+../Drivers/lvgl-master/examples/widgets/imgbtn/../../../src/core/../core/lv_disp.h:390:34:lv_scr_act	8	static
+../Drivers/lvgl-master/examples/widgets/imgbtn/lv_example_imgbtn_1.c:4:6:lv_example_imgbtn_1	24	static

@@ -1,0 +1,10 @@
+../Drivers/lvgl-master/examples/widgets/arc/../../../src/misc/lv_anim.h:125:20:lv_anim_set_var	16	static
+../Drivers/lvgl-master/examples/widgets/arc/../../../src/misc/lv_anim.h:137:20:lv_anim_set_exec_cb	16	static
+../Drivers/lvgl-master/examples/widgets/arc/../../../src/misc/lv_anim.h:147:20:lv_anim_set_time	16	static
+../Drivers/lvgl-master/examples/widgets/arc/../../../src/misc/lv_anim.h:168:20:lv_anim_set_values	24	static
+../Drivers/lvgl-master/examples/widgets/arc/../../../src/misc/lv_anim.h:266:20:lv_anim_set_repeat_count	16	static
+../Drivers/lvgl-master/examples/widgets/arc/../../../src/misc/lv_anim.h:276:20:lv_anim_set_repeat_delay	16	static
+../Drivers/lvgl-master/examples/widgets/arc/../../../src/core/../core/lv_disp.h:390:34:lv_scr_act	8	static
+../Drivers/lvgl-master/examples/widgets/arc/../../../src/core/lv_obj_pos.h:199:20:lv_obj_center	16	static
+../Drivers/lvgl-master/examples/widgets/arc/lv_example_arc_2.c:5:13:set_angle	16	static
+../Drivers/lvgl-master/examples/widgets/arc/lv_example_arc_2.c:13:6:lv_example_arc_2	88	static

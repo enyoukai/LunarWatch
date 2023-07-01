@@ -1,0 +1,6 @@
+lv_color.h:343:20:lv_color16_set_int	1
+lv_color.h:358:20:lv_color_set_int	1
+lv_color.h:520:28:lv_color_to32	1
+lv_color.h:723:26:lv_color_hex	1
+lv_disp.h:390:34:lv_scr_act	1
+lv_example_canvas_2.c:10:6:lv_example_canvas_2	3

@@ -1,0 +1,2 @@
+../Core/Src/input.c:7:6:input_init	16	static
+../Core/Src/input.c:14:6:input_read_cb	16	static

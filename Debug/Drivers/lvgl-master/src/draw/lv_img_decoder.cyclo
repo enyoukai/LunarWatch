@@ -1,0 +1,15 @@
+lv_mem.h:96:20:lv_memzero	1
+lv_img_decoder.c:48:6:_lv_img_decoder_init	3
+lv_img_decoder.c:74:10:lv_img_decoder_get_info	7
+lv_img_decoder.c:98:10:lv_img_decoder_open	13
+lv_img_decoder.c:167:10:lv_img_decoder_read_line	2
+lv_img_decoder.c:179:6:lv_img_decoder_close	4
+lv_img_decoder.c:195:20:lv_img_decoder_create	3
+lv_img_decoder.c:211:6:lv_img_decoder_delete	1
+lv_img_decoder.c:222:6:lv_img_decoder_set_info_cb	1
+lv_img_decoder.c:232:6:lv_img_decoder_set_open_cb	1
+lv_img_decoder.c:242:6:lv_img_decoder_set_read_line_cb	1
+lv_img_decoder.c:252:6:lv_img_decoder_set_close_cb	1
+lv_img_decoder.c:264:10:lv_img_decoder_built_in_info	8
+lv_img_decoder.c:312:10:lv_img_decoder_built_in_open	16
+lv_img_decoder.c:392:6:lv_img_decoder_built_in_close	5

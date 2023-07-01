@@ -1,0 +1,12 @@
+lv_color.h:718:26:lv_color_make	1
+lv_color.h:818:26:lv_color_white	1
+lv_color.h:822:26:lv_color_black	1
+lv_style.h:565:20:lv_style_set_size	1
+lv_style.h:571:20:lv_style_set_pad_all	1
+lv_style.h:591:20:lv_style_set_pad_gap	1
+lv_disp.h:573:26:lv_disp_dpx	3
+lv_theme_mono.c:80:13:style_init	18
+lv_theme_mono.c:178:6:lv_theme_mono_is_inited	1
+lv_theme_mono.c:183:14:lv_theme_mono_init	4
+lv_theme_mono.c:211:13:theme_apply	35
+lv_theme_mono.c:506:13:style_init_reset	2

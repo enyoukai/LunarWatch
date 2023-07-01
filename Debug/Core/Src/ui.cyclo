@@ -1,0 +1,9 @@
+lv_color.h:343:20:lv_color16_set_int	1
+lv_color.h:358:20:lv_color_set_int	1
+lv_color.h:718:26:lv_color_make	1
+lv_color.h:723:26:lv_color_hex	1
+lv_color.h:818:26:lv_color_white	1
+lv_disp.h:390:34:lv_scr_act	1
+ui.c:16:6:ui_init	1
+ui.c:91:6:render_clock	3
+ui.c:129:6:lvgl_pause_ms	2
